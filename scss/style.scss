@@ -473,6 +473,12 @@ h1, h2, h3, h4, h5,
 					@include media-breakpoint-down(md){
 						width: 100%;
 						z-index: 0;
+						// my code
+						background-position: 10% -10%;
+						background-size: 105%;
+						position: relative;
+						top: -100px;
+
 						.overlay{
 							opacity: .3;
 						}

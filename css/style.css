@@ -9360,6 +9360,10 @@ h1, h2, h3, h4, h5,
   .owl-carousel.home-slider .slider-item .slider-text .one-third {
     width: 100%;
     z-index: 0;
+    background-position: 10% -10%;
+    background-size: 105%;
+    position: relative;
+    top: -100px;
   }
   .owl-carousel.home-slider .slider-item .slider-text .one-third .overlay {
     opacity: 0.3;
