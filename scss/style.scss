@@ -369,7 +369,169 @@ h1, h2, h3, h4, h5,
 	  }
 	}
 }
+.hero-banner {
+	.slider-text {
+		height: 750px;
+		z-index: 0;
+		&.bg-gradient {
+			&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 10%;
+					right: 0%;
+					background: rgb(189, 134, 255);
+					background: radial-gradient(circle, $primary 0%, $black 31%, $black 100%);
+					z-index: -2;
+					opacity: .6;	
+			}
+		}
+		@include media-breakpoint-down(md){
+			text-align: center;
+		}
+		.one-third{
+			width: 50%;
+			position: relative;
+			background-size: 100%;
+			z-index: -1;
+			.overlay{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: $black;
+				opacity: 0;
+			}
+			@include media-breakpoint-down(lg){
+				width: 50%;
+			}
+			@include media-breakpoint-down(md){
+				width: 100%;
+				z-index: 0;
+				background-position: 0 0;
 
+				.overlay{
+					opacity: .3;
+				}
+				&:after{
+					opacity: 0;
+				}
+			}
+		}
+		.one-forth{
+			width: 50%;
+			position: relative;
+			// @include media-breakpoint-up(md){
+			// 	position: absolute;
+			// 	top: 0;
+			// 	left: 0;
+			// 	bottom: 0;
+			// 	right: 0;
+			// 	width: 1200px;
+			// 	margin: 0 auto;
+			// }
+			@include media-breakpoint-down(md){
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 1;
+				padding: 1em;
+			}
+			.text{
+				width: 100%;
+				@include media-breakpoint-up(lg){
+					position: absolute;
+					top: 50%;
+					left: 0;
+					transform: translateY(-50%);
+					right: 0;
+					// max-width: 50%;
+					padding-left: 45px;
+					padding-right: 3em;
+				}
+			}
+		}
+		// .icon-video{
+		// 	position: absolute;
+		// 	top: 120px;
+		// 	right: 70px;
+		// 	content: '';
+		// 	width: 70px;
+		// 	height: 70px;
+		// 	background: $white;
+		// 	@include border-radius(50%);
+		// 	span{
+		// 		font-size: 20px;
+		// 		color: $black;
+		// 	}
+		// 	span.play{
+		// 	}
+		// }
+		.subheading{
+			color: $black;
+			font-weight: 600;
+			font-size: 22px;
+			letter-spacing: 3px;
+			// text-transform: uppercase;
+			color: $primary;
+			margin-bottom: 2rem;
+			display: block;
+		}
+		.text{
+			position: relative;
+			z-index: 1;
+		}
+		h1 {
+			font-size: 60px;
+			color: $white;
+			line-height: 1.2;
+			font-weight: 800;
+			span{
+				font-weight: 800;
+				color: $primary;
+				background: linear-gradient(270deg, $primary 0%, #e6d1ff 75%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			@include media-breakpoint-down(md) {
+				color: $white;
+				font-size: 50px;
+			}
+			@include media-breakpoint-down(sm) {
+				font-size: 40px;
+				// color: $pri;
+			}
+		}
+		h2{
+			font-size: 30px;
+			font-weight: 400;
+			@include media-breakpoint-down(md){
+				color: $white;
+			}
+		}
+		p {
+			color: rgba(0,0,0,.8);
+			font-weight: 400;
+			@include media-breakpoint-down(md) {
+				color: rgba(255,255,255,.7);
+				font-size: 23px;
+			}
+		}
+		.btn-custom{
+			bordeR: 1px solid $primary;
+			padding: 5px 20px;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 3px;
+		}
+	}
+}
 
 //OWL CAROUSEL
 .owl-carousel {
@@ -474,10 +636,10 @@ h1, h2, h3, h4, h5,
 						width: 100%;
 						z-index: 0;
 						// my code
-						background-position: 10% -10%;
-						background-size: 105%;
-						position: relative;
-						top: -100px;
+						// background-position: 10% -10%;
+						// background-size: 105%;
+						// position: relative;
+						// top: -100px;
 
 						.overlay{
 							opacity: .3;
@@ -1429,8 +1591,9 @@ textarea.form-control {
 		}
 	}
 	h2{
-		font-size: 50px;
+		font-size: 4rem;
 		font-weight: 700;
+		
 		span{
 			font-weight: 400;
 		}
